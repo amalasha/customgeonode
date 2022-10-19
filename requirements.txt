@@ -32,7 +32,7 @@ zipstream-new==1.1.8
 
 # Django Apps
 django-allauth==0.47.0
-django-appconf==1.0.4
+django-appconf==1.0.5
 django-celery-beat==2.2.1
 django-celery-results==2.4.0
 django-filter==2.4.0
