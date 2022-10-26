@@ -708,6 +708,7 @@ class ResourceBase(PolymorphicModel, PermissionLevelMixin, ItemBase):
     data_quality_statement_help_text = _(
         'general explanation of the data producer\'s knowledge about the lineage of a'
         ' dataset')
+    citation_help_text = _('publications')
     # internal fields
     uuid = models.CharField(max_length=36)
     title = models.CharField(_('title'), max_length=255, help_text=_(
@@ -826,6 +827,14 @@ class ResourceBase(PolymorphicModel, PermissionLevelMixin, ItemBase):
         limit_choices_to=Q(is_choice=True),
         verbose_name=_("spatial representation type"),
         help_text=spatial_representation_type_help_text)
+
+    # newly added fields
+    citation = models.TextField(
+        _('citation'),
+        max_length=500,
+        null=True,
+        blank=True,
+        help_text=citation_help_text)
 
     # Section 5
     temporal_extent_start = models.DateTimeField(
