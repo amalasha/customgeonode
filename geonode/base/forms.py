@@ -398,6 +398,11 @@ class ResourceBaseForm(TranslationModelForm):
         required=False,
         widget=TinyMCE())
 
+    citation = forms.CharField(
+        label=_("Citation"),
+        required=False,
+        widget=TinyMCE())
+
     purpose = forms.CharField(
         label=_("Purpose"),
         required=False,
